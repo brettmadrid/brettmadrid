@@ -1,8 +1,10 @@
+import { Cover } from "components/Cover";
+
 export const BlockRenderer = ({ blocks }) => {
   return blocks.map((block) => {
     switch (block.name) {
       case "core/cover": {
-        return <div key={block.id}>Puffy</div>;
+        return <Cover key={block.id} background={block.attributes.url} />;
       }
       default:
         return null;
